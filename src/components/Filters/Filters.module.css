@@ -1,0 +1,127 @@
+.aside {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+.inputWrap {
+  position: relative;
+  display: block;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+  width: 18px;
+  height: 18px;
+}
+
+.input {
+  width: 100%;
+  padding: 18px 16px 18px 44px;
+  background-color: var(--color-bg-input);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  color: var(--color-text);
+}
+.input::placeholder { color: var(--color-muted); }
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+  border-top: 1px solid var(--color-border);
+  padding-top: 24px;
+  margin-top: 8px;
+}
+
+.group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.groupTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 96px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: border-color 0.15s ease;
+}
+.option:hover { border-color: var(--color-primary); }
+.optionActive {
+  border-color: var(--color-primary);
+  border-width: 2px;
+}
+
+.optionIcon { width: 24px; height: 24px; }
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.searchBtn {
+  padding: 16px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease;
+}
+.searchBtn:hover { background-color: var(--color-primary-hover); }
+
+.clearBtn {
+  padding: 16px;
+  background-color: #fff;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  transition: border-color 0.15s ease;
+}
+.clearBtn:hover { border-color: var(--color-primary); }

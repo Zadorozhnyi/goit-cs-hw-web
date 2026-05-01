@@ -1,0 +1,11 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.star { color: var(--color-star); width: 16px; height: 16px; }
+
+.asLink { text-decoration: underline; text-underline-offset: 3px; }

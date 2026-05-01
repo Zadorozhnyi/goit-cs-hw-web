@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.title { font-size: 20px; font-weight: 600; }
+.subtitle { color: var(--color-muted); font-size: 16px; }
+
+.fields { display: flex; flex-direction: column; gap: 14px; }
+
+.field { display: flex; flex-direction: column; gap: 4px; }
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 18px 16px;
+  background-color: var(--color-bg-input);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  color: var(--color-text);
+  resize: none;
+}
+.input::placeholder, .textarea::placeholder { color: var(--color-muted); }
+
+.datepicker { width: 100%; }
+.datepicker :global(.react-datepicker-wrapper) { width: 100%; }
+
+.error { color: var(--color-accent); font-size: 12px; }
+
+.submit {
+  align-self: center;
+  padding: 16px 56px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease;
+}
+.submit:hover:not(:disabled) { background-color: var(--color-primary-hover); }
+.submit:disabled { opacity: 0.6; cursor: not-allowed; }

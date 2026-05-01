@@ -1,9 +1,10 @@
 # TravelTrucks
 
-Frontend for a camper-rental web app built with **Vite + React + Redux Toolkit + React Router + Axios**. CSS Modules for styling, `react-hot-toast` for notifications, `redux-persist` keeps the favourites list across reloads.
+Frontend for a camper-rental web app built with **Vite + React + Redux Toolkit + React Router + Axios**. CSS Modules for styling, `react-hot-toast` for notifications, favourites are persisted to `localStorage` so they survive a page reload.
 
-The data comes from a public mock API:
-`https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers`.
+- **Live demo:** <https://goit-cs-hw-web.vercel.app>
+- **Repository:** <https://github.com/Zadorozhnyi/goit-cs-hw-web>
+- **Mock API:** <https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers>
 
 ## Features
 
@@ -15,11 +16,11 @@ The data comes from a public mock API:
 
 ## Tech stack
 
-- Vite, React 18, React Router v6 (lazy pages + nested routes)
-- Redux Toolkit + redux-persist (favourites)
+- Vite, React 19, React Router v7 (lazy pages + nested routes)
+- Redux Toolkit (favourites stored in `localStorage` directly from the slice)
 - Axios
 - CSS Modules + global CSS variables
-- react-hot-toast, react-datepicker, react-icons
+- react-hot-toast, react-datepicker, react-icons, clsx
 
 ## Project structure
 

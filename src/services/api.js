@@ -18,12 +18,23 @@ const buildParams = ({ location, form, equipment, page, limit }) => {
   return params;
 };
 
-// API responds with { total, items }
+// API responds with { total, items }. mockapi returns 404 + "Not found"
+// when filters match nothing — treat that as an empty result, not an error.
 export const fetchCampers = (filters = {}) =>
-  api.get("/campers", { params: buildParams(filters) }).then((r) => ({
-    items: r.data?.items ?? [],
-    total: r.data?.total ?? 0,
-  }));
+  api
+    .get("/campers", {
+      params: buildParams(filters),
+      validateStatus: (status) => (status >= 200 && status < 300) || status === 404,
+    })
+    .then((r) => {
+      if (r.status === 404 || typeof r.data !== "object") {
+        return { items: [], total: 0 };
+      }
+      return {
+        items: r.data?.items ?? [],
+        total: r.data?.total ?? 0,
+      };
+    });
 
 export const fetchCamperById = (id) =>
   api.get(`/campers/${id}`).then((r) => r.data);
